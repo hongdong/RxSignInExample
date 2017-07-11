@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		29F88728BC99C5ED0204E199 /* Pods_RxSignInExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DFC959E0B63217F14B2D9D4 /* Pods_RxSignInExample.framework */; };
 		518F373683C9641BD91BA792 /* Pods_RxSignInExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35AF18DFE767C04B7E07435F /* Pods_RxSignInExampleTests.framework */; };
+		AEB44E3E1F14D24A00BF482E /* ValidationErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB44E3D1F14D24A00BF482E /* ValidationErrorType.swift */; };
+		AEB44E411F14D45C00BF482E /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB44E401F14D45C00BF482E /* ActivityIndicator.swift */; };
 		B84074AB3921C2F4C415CA85 /* Pods_RxSignInExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34CEB573106E2F7B8FF4B90C /* Pods_RxSignInExampleUITests.framework */; };
 		E58367BC1D9D035500574B5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58367BB1D9D035500574B5D /* AppDelegate.swift */; };
 		E58367C11D9D035500574B5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E58367BF1D9D035500574B5D /* Main.storyboard */; };
@@ -19,7 +21,6 @@
 		E58367FD1D9D33FB00574B5D /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58367FC1D9D33FB00574B5D /* SignInViewController.swift */; };
 		E58367FF1D9D340A00574B5D /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58367FE1D9D340A00574B5D /* SignInViewModel.swift */; };
 		E58368011D9D341800574B5D /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58368001D9D341800574B5D /* GithubAPI.swift */; };
-		E58368031D9D342D00574B5D /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58368021D9D342D00574B5D /* ActivityIndicator.swift */; };
 		E58368051D9D344100574B5D /* Observable+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58368041D9D344100574B5D /* Observable+ObjectMapper.swift */; };
 		E58368091D9D358900574B5D /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E58368081D9D358900574B5D /* background.jpg */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,8 @@
 		35AF18DFE767C04B7E07435F /* Pods_RxSignInExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSignInExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AE42AF48DBA03A7199DA214 /* Pods-RxSignInExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSignInExampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSignInExampleUITests/Pods-RxSignInExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		584E8270FD314D930ED34AE0 /* Pods-RxSignInExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSignInExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSignInExampleTests/Pods-RxSignInExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AEB44E3D1F14D24A00BF482E /* ValidationErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationErrorType.swift; sourceTree = "<group>"; };
+		AEB44E401F14D45C00BF482E /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityIndicator.swift; path = ../../../Downloads/ActivityIndicator.swift; sourceTree = "<group>"; };
 		D6F999FB4F4AF4B614AE3916 /* Pods-RxSignInExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSignInExampleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSignInExampleUITests/Pods-RxSignInExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D78741FE852826FF7C47C24B /* Pods-RxSignInExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSignInExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSignInExample/Pods-RxSignInExample.debug.xcconfig"; sourceTree = "<group>"; };
 		E58367B81D9D035500574B5D /* RxSignInExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSignInExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,7 +68,6 @@
 		E58367FC1D9D33FB00574B5D /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = ViewController/SignInViewController.swift; sourceTree = "<group>"; };
 		E58367FE1D9D340A00574B5D /* SignInViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewModel.swift; path = ViewModel/SignInViewModel.swift; sourceTree = "<group>"; };
 		E58368001D9D341800574B5D /* GithubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GithubAPI.swift; path = Networking/GithubAPI.swift; sourceTree = "<group>"; };
-		E58368021D9D342D00574B5D /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivityIndicator.swift; path = Service/ActivityIndicator.swift; sourceTree = "<group>"; };
 		E58368041D9D344100574B5D /* Observable+ObjectMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Observable+ObjectMapper.swift"; path = "Extension/Observable+ObjectMapper.swift"; sourceTree = "<group>"; };
 		E58368081D9D358900574B5D /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		F89160F055EBA232E9A55215 /* Pods-RxSignInExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSignInExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSignInExampleTests/Pods-RxSignInExampleTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				E58367C41D9D035500574B5D /* LaunchScreen.storyboard */,
 				E58367C71D9D035500574B5D /* Info.plist */,
 				E58368081D9D358900574B5D /* background.jpg */,
+				AEB44E3D1F14D24A00BF482E /* ValidationErrorType.swift */,
 			);
 			path = RxSignInExample;
 			sourceTree = "<group>";
@@ -207,7 +210,7 @@
 		E58367F91D9D328300574B5D /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				E58368021D9D342D00574B5D /* ActivityIndicator.swift */,
+				AEB44E401F14D45C00BF482E /* ActivityIndicator.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				E58367D41D9D035500574B5D /* Frameworks */,
 				E58367D51D9D035500574B5D /* Resources */,
 				F81ADDFCED6E4F1B1F112DFA /* [CP] Copy Pods Resources */,
+				3ED958A174B15AFBD43EF9C3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -374,6 +378,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxSignInExampleTests/Pods-RxSignInExampleTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		3ED958A174B15AFBD43EF9C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxSignInExampleUITests/Pods-RxSignInExampleUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5705A9387B0754936D3CB9E0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -386,7 +405,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		5E56AD94A7BFC6534582AE4D /* [CP] Check Pods Manifest.lock */ = {
@@ -401,7 +420,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		84FB0C61224258A7C6687D42 /* [CP] Embed Pods Frameworks */ = {
@@ -461,7 +480,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		F81ADDFCED6E4F1B1F112DFA /* [CP] Copy Pods Resources */ = {
@@ -488,10 +507,11 @@
 			files = (
 				E58368051D9D344100574B5D /* Observable+ObjectMapper.swift in Sources */,
 				E58367FD1D9D33FB00574B5D /* SignInViewController.swift in Sources */,
-				E58368031D9D342D00574B5D /* ActivityIndicator.swift in Sources */,
 				E58367BC1D9D035500574B5D /* AppDelegate.swift in Sources */,
 				E58367FF1D9D340A00574B5D /* SignInViewModel.swift in Sources */,
+				AEB44E411F14D45C00BF482E /* ActivityIndicator.swift in Sources */,
 				E58368011D9D341800574B5D /* GithubAPI.swift in Sources */,
+				AEB44E3E1F14D24A00BF482E /* ValidationErrorType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,8 +27,13 @@ class SignInViewController: UIViewController {
         customizeTF()
         
         let viewModel = SignInViewModel(
-            input: (username: usernameTF.rx.text.asDriver(), password: passwordTF.rx.text.asDriver(), signInTap: signInBtn.rx.tap.asDriver()),
-            dependency: (API: GithubAPIProvider, other: "other dependency"))
+            input: (
+                username: usernameTF.rx.text.orEmpty.asDriver(),
+                password: passwordTF.rx.text.orEmpty.asDriver(),
+                signInTap: signInBtn.rx.tap.asDriver()
+            ),
+            dependency: (API: GithubAPIProvider, other: "other dependency")
+        )
         
         viewModel.signInEnabled
             .drive(onNext: { [weak self] valid in
@@ -38,7 +43,7 @@ class SignInViewController: UIViewController {
             .addDisposableTo(disposeBag)
         
         viewModel.signingIn
-            .drive(signInActivityIndicator.rx.animating)
+            .drive(signInActivityIndicator.rx.isAnimating)
             .addDisposableTo(disposeBag)
         
         viewModel.signedIn

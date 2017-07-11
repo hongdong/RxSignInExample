@@ -18,6 +18,10 @@ enum GithubAPI {
 }
 
 extension GithubAPI: TargetType {
+    var parameterEncoding: ParameterEncoding {
+        return URLEncoding.default
+    }
+    
     var baseURL: URL {
         return URL(string: "https://api.github.com")!
     }
@@ -32,7 +36,7 @@ extension GithubAPI: TargetType {
     var method: Moya.Method {
         switch self {
         case .SignIn:
-            return .POST
+            return .post
         }
     }
     
@@ -57,13 +61,13 @@ extension GithubAPI: TargetType {
 
 var endpointClosure = { (target: GithubAPI) -> Endpoint<GithubAPI> in
     let url = target.baseURL.appendingPathComponent(target.path).absoluteString
-    let endpoint: Endpoint<GithubAPI> = Endpoint(URL: url, sampleResponseClosure: {.networkResponse(200, target.sampleData)}, method: target.method, parameters: target.parameters)
+    let endpoint: Endpoint<GithubAPI> = Endpoint(url: url, sampleResponseClosure: {.networkResponse(200, target.sampleData)}, method: target.method, parameters: target.parameters)
     switch target {
     case .SignIn(let username, let password):
         let credentialData = "\(username):\(password)".data(using: String.Encoding.utf8)!
         let base64Credentials = credentialData.base64EncodedString(options: [])
-        return endpoint.endpointByAddingHTTPHeaderFields(["Authorization": "Basic \(base64Credentials)"])
-            .endpointByAddingParameterEncoding(JSONEncoding.default)
+        return endpoint.adding(newHTTPHeaderFields: ["Authorization": "Basic \(base64Credentials)"])
+            .adding(newParameterEncoding: JSONEncoding.default)
     }
 }
 

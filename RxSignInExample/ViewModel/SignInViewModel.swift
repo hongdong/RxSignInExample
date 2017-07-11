@@ -26,13 +26,13 @@ class SignInViewModel {
         
         validatedUsername = input.username
             .map { usernameString in
-                let usernameRule = ValidationRuleLength(min: 1, max: 100, failureError: ValidationError(message: "InValid Username"))
+                let usernameRule = ValidationRuleLength(min: 1, max: 100, error: ValidationError(message: "InValid Username"))
                 return usernameString.validate(rule: usernameRule)
         }
         
         validatedPassword = input.password
             .map { passwordString in
-                let passwordRule = ValidationRuleLength(min: 6, max: 100, failureError: ValidationError(message: "InValid Password"))
+                let passwordRule = ValidationRuleLength(min: 6, max: 100, error: ValidationError(message: "InValid Password"))
                 return passwordString.validate(rule: passwordRule)
         }
         

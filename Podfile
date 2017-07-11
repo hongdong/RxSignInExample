@@ -6,11 +6,11 @@ target 'RxSignInExample' do
   use_frameworks!
 
   # Pods for RxSignInExample
-  pod 'Moya/RxSwift', git: 'https://github.com/Moya/Moya.git', tag: '8.0.0-beta.1'
-  pod 'RxSwift', '3.0.0-beta.1'
-  pod 'RxCocoa', '3.0.0-beta.1'
+  pod 'Moya/RxSwift'
+  pod 'RxSwift'
+  pod 'RxCocoa'
   pod 'ObjectMapper'
-  pod 'Validator', git: 'https://github.com/adamwaite/Validator.git', tag: 'v2.0.0'
+  pod 'Validator'
   pod 'KRProgressHUD'
 
   target 'RxSignInExampleTests' do
