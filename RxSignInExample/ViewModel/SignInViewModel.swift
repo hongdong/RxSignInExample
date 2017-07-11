@@ -21,8 +21,15 @@ class SignInViewModel {
     let signedIn: Driver<Bool>
     
     init(
-        input: (username: Driver<String>, password: Driver<String>, signInTap: Driver<Void>),
-        dependency: (API: RxMoyaProvider<GithubAPI>, other: String)) {
+        input: (
+            username: Driver<String>,
+            password: Driver<String>,
+            signInTap: Driver<Void>
+        ),
+        dependency: (
+            API: RxMoyaProvider<GithubAPI>, other: String
+        )
+    ) {
         
         validatedUsername = input.username
             .map { usernameString in
